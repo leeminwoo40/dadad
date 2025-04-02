@@ -7,7 +7,7 @@
 ``` bash
 dkakdakdasdkilsadkljsalkdaslk
 ```
-##### 구구단 만들기
+##### 1.구구단 만들기
 ```bash
 # 구구단 출력 함수
 def print_gugudan():
