@@ -7,4 +7,15 @@
 ``` bash
 dkakdakdasdkilsadkljsalkdaslk
 ```
+##### 구구단 만들기
+```bash
+# 구구단 출력 함수
+def print_gugudan():
+    for i in range(1, 10):
+        for j in range(1, 10):
+            print(f"{i} x {j} = {i*j}", end="\t")
+        print()
 
+# 구구단 출력
+print_gugudan()
+```
