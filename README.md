@@ -19,7 +19,7 @@ def print_gugudan():
 # 구구단 출력
 print_gugudan()
 ```
-### 2. yolov8로 이미지 분석하기
+### 2. yolov8로 이미지 & 영상 분석하기
 ``` bash
 !pip install ultralytics
 
@@ -44,4 +44,54 @@ display(Image('/content/output.jpg'))
 # 객체 수 세기
 num_objects = len(results[0].boxes)
 print(f"이미지에서 {num_objects}개의 개체가 감지되었습니다.")
+```
+```bash
+from google.colab import files
+uploaded = files.upload()  # 여기서 '분류영상.mp4'와 'yolov8x.pt'를 업로드
+
+import cv2
+from ultralytics import YOLO
+from google.colab import files
+
+# 모델 로드
+model = YOLO('/content/yolov8x.pt')
+
+# 영상 파일 경로
+video_path = '/content/분류영상.mp4'
+
+# 영상 파일 열기
+cap = cv2.VideoCapture(video_path)
+
+# 영상의 프레임 크기와 FPS 정보 가져오기
+frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = cap.get(cv2.CAP_PROP_FPS)
+
+# 결과를 저장할 비디오 파일 설정
+output_path = '/content/output.mp4'
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 'mp4v' codec 사용
+out = cv2.VideoWriter(output_path, fourcc, fps, (frame_width, frame_height))
+
+# 영상 프레임을 하나씩 처리
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # YOLO 모델을 사용하여 객체 감지
+    results = model(frame)
+
+    # 인식 결과를 이미지에 표시
+    annotated_frame = results.plot()  # 결과를 프레임에 오버레이
+
+    # 결과 프레임을 output.mp4에 기록
+    out.write(annotated_frame)
+
+# 자원 해제
+cap.release()
+out.release()
+
+# 결과 영상 파일 보여주기
+from IPython.display import Video
+Video(output_path, embed=True)  # embed=True 추가
 ```
