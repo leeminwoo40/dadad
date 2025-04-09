@@ -19,8 +19,8 @@ def print_gugudan():
 # 구구단 출력
 print_gugudan()
 ```
+### 2. yolov8로 이미지 분석하기
 ``` bash
-##### 2. yolov8로 이미지 분석하기
 !pip install ultralytics
 
 from ultralytics import YOLO
