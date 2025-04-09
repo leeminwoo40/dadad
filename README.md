@@ -83,7 +83,7 @@ while cap.isOpened():
 
     # 인식 결과를 이미지에 표시
     annotated_frame = results.plot()  # 결과를 프레임에 오버레이
-
+ 
     # 결과 프레임을 output.mp4에 기록
     out.write(annotated_frame)
 
@@ -91,7 +91,11 @@ while cap.isOpened():
 cap.release()
 out.release()
 
-# 결과 영상 파일 보여주기
-from IPython.display import Video
-Video(output_path, embed=True)  # embed=True 추가
+# output.mp4를 Google Drive에 저장
+from google.colab import drive
+drive.mount('/content/drive')
+!cp /content/output.mp4 /content/drive/MyDrive/
+
+# Google Drive에서 파일 다운로드
+files.download('/content/drive/MyDrive/output.mp4')
 ```
