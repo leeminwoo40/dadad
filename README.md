@@ -100,14 +100,14 @@ drive.mount('/content/drive')
 files.download('/content/drive/MyDrive/output.mp4')
 ```
 ### 3. yolo 8,10,11 성능 비교하기기
-```bash
+
 ![yolov8](https://github.com/user-attachments/assets/f8c09742-ba38-4096-910e-aa1869919657)
 
 ![yolov10](https://github.com/user-attachments/assets/c3a5e268-b514-46fc-8461-ca5591c22194)
 
 ![yolov11](https://github.com/user-attachments/assets/0cca4dc2-9ded-4d4b-bd4c-4f4a90b6c8e3)
 
-```
+
 
 
 
