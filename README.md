@@ -99,3 +99,15 @@ drive.mount('/content/drive')
 # Google Drive에서 파일 다운로드
 files.download('/content/drive/MyDrive/output.mp4')
 ```
+### 3. yolo 8,10,11 성능 비교하기기
+```bash
+![image](https://github.com/user-attachments/assets/b6ce7583-3f60-4eeb-aa86-756686b0c3f0)
+![image](https://github.com/user-attachments/assets/9bb1c253-ce2a-4fb3-b84e-2706f761af4a)
+![image](https://github.com/user-attachments/assets/6c7c069b-448b-4bad-ae35-f1d7e896d315)
+```
+
+
+
+
+
+
