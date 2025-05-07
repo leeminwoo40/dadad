@@ -107,7 +107,8 @@ files.download('/content/drive/MyDrive/output.mp4')
 
 ![yolov11](https://github.com/user-attachments/assets/0cca4dc2-9ded-4d4b-bd4c-4f4a90b6c8e3)
 
-![그래프2](https://github.com/user-attachments/assets/2ebbcbd3-8794-4b22-a1e4-bf76b27b07db)
+![그래프2](https://github.com/user-attachments/assets/43c60b77-3ec3-4eb5-ba8d-5f8edbe78c96)
+
 
 
 
