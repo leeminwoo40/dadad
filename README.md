@@ -103,9 +103,9 @@ files.download('/content/drive/MyDrive/output.mp4')
 
 ![yolov8](https://github.com/user-attachments/assets/f8c09742-ba38-4096-910e-aa1869919657)
 
-![yolov11](https://github.com/user-attachments/assets/0cca4dc2-9ded-4d4b-bd4c-4f4a90b6c8e3)
-
 ![그래프10](https://github.com/user-attachments/assets/e74c7c49-10b3-4243-acf9-12993ce07778)
+
+![yolov11](https://github.com/user-attachments/assets/0cca4dc2-9ded-4d4b-bd4c-4f4a90b6c8e3)
 
 ![그래프2](https://github.com/user-attachments/assets/2ebbcbd3-8794-4b22-a1e4-bf76b27b07db)
 
